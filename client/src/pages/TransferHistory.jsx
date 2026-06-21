@@ -2,9 +2,8 @@ import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import {
     History, Search, Filter, Download, ArrowUpRight,
-    ArrowDownLeft, ArrowLeftRight, Calendar
+    ArrowDownLeft, ArrowLeftRight, Calendar, ArrowRight
 } from 'lucide-react'
-import { ArrowRight } from 'lucide-react'
 import { getMovements } from '../api/movements'
 import Badge from '../components/Badge'
 import { SkeletonTable } from '../components/Skeleton'
