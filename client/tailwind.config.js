@@ -4,15 +4,15 @@ export default {
     theme: {
         extend: {
             colors: {
-                bg: '#0F1117',
-                surface: '#1A1D27',
-                border: '#2A2D3E',
-                primary: '#6C63FF',
-                accent: '#00D9FF',
-                success: '#22C55E',
+                bg: '#FFFFFF',
+                surface: '#F8FAFC',
+                border: '#F1F5F9',
+                primary: '#059669', // Emerald-600
+                accent: '#047857', // Emerald-700
+                success: '#10B981',
                 danger: '#EF4444',
                 warning: '#F59E0B',
-                'text-primary': '#F1F5F9',
+                'text-primary': '#0F172A',
                 'text-muted': '#64748B',
             },
             fontFamily: {
@@ -20,19 +20,20 @@ export default {
                 mono: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
             },
             borderRadius: {
-                card: '12px',
-                btn: '8px',
+                card: '16px',
+                btn: '10px',
             },
             boxShadow: {
-                glow: '0 0 20px rgba(108, 99, 255, 0.3)',
-                'glow-accent': '0 0 20px rgba(0, 217, 255, 0.3)',
-                'glow-success': '0 0 15px rgba(34, 197, 94, 0.3)',
-                'glow-danger': '0 0 15px rgba(239, 68, 68, 0.3)',
-                card: '0 4px 24px rgba(0,0,0,0.4)',
+                glow: '0 0 20px rgba(5, 150, 105, 0.15)',
+                'glow-accent': '0 0 20px rgba(4, 120, 87, 0.15)',
+                'glow-success': '0 0 15px rgba(16, 185, 129, 0.15)',
+                'glow-danger': '0 0 15px rgba(239, 68, 68, 0.15)',
+                card: '0 8px 30px rgba(0, 0, 0, 0.04)',
+                soft: '0 2px 15px rgba(0, 0, 0, 0.02)',
             },
             backgroundImage: {
-                'gradient-primary': 'linear-gradient(135deg, #6C63FF 0%, #00D9FF 100%)',
-                'gradient-surface': 'linear-gradient(135deg, #1A1D27 0%, #0F1117 100%)',
+                'gradient-primary': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                'gradient-surface': 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)',
             },
             animation: {
                 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

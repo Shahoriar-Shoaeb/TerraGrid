@@ -29,12 +29,12 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-screen bg-bg flex items-center justify-center p-4"
-            style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(108,99,255,0.1) 0%, #0F1117 60%)' }}>
+        <div className="min-h-screen bg-bg flex items-center justify-center p-4 relative overflow-hidden"
+            style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(5,150,105,0.03) 0%, #FFFFFF 80%)' }}>
 
             {/* Background grid */}
             <div className="absolute inset-0 opacity-[0.03]"
-                style={{ backgroundImage: 'linear-gradient(#6C63FF 1px, transparent 1px), linear-gradient(90deg, #6C63FF 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+                style={{ backgroundImage: 'linear-gradient(#059669 1px, transparent 1px), linear-gradient(90deg, #059669 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ export default function Login() {
                 >
                     <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-glow"
-                            style={{ background: 'linear-gradient(135deg, #6C63FF 0%, #00D9FF 100%)' }}>
+                            style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)' }}>
                             <Zap size={24} className="text-white" />
                         </div>
                         <div>
@@ -62,8 +62,8 @@ export default function Login() {
                 </motion.div>
 
                 {/* Card */}
-                <div className="bg-surface border border-border rounded-card shadow-2xl p-8"
-                    style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 60px rgba(108,99,255,0.05)' }}>
+                <div className="bg-white border border-border rounded-card shadow-xl p-8"
+                    style={{ boxShadow: '0 25px 50px rgba(15,23,42,0.1), 0 0 60px rgba(16,185,129,0.03)' }}>
                     <h2 className="text-xl font-bold text-text-primary mb-1">Sign in to your account</h2>
                     <p className="text-sm text-text-muted mb-6">Enter your credentials to continue</p>
 
@@ -119,8 +119,8 @@ export default function Login() {
                             disabled={loading}
                             whileHover={{ scale: 1.01 }}
                             whileTap={{ scale: 0.99 }}
-                            className="w-full py-3 font-bold rounded-btn text-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed mt-2"
-                            style={{ background: 'linear-gradient(135deg, #6C63FF 0%, #00D9FF 100%)' }}
+                            className="w-full py-3 font-bold rounded-btn text-white transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed mt-2 shadow-lg shadow-emerald-500/20"
+                            style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)' }}
                         >
                             {loading ? (
                                 <span className="flex items-center justify-center gap-2">

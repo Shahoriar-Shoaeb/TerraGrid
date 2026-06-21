@@ -50,7 +50,7 @@ export default function Sidebar({ isMobileOpen, onClose }) {
                 <div className="p-6 border-b border-border">
                     <div className="flex items-center gap-3">
                         <div className="w-9 h-9 rounded-lg flex items-center justify-center"
-                            style={{ background: 'linear-gradient(135deg, #6C63FF 0%, #00D9FF 100%)' }}>
+                            style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)' }}>
                             <Zap size={18} className="text-white" />
                         </div>
                         <div>
@@ -95,9 +95,9 @@ export default function Sidebar({ isMobileOpen, onClose }) {
 
                 {/* User + Logout */}
                 <div className="p-4 border-t border-border">
-                    <div className="flex items-center gap-3 px-4 py-3 mb-2 rounded-btn bg-bg/50">
+                    <div className="flex items-center gap-3 px-4 py-3 mb-2 rounded-btn bg-slate-50">
                         <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white"
-                            style={{ background: 'linear-gradient(135deg, #6C63FF, #00D9FF)' }}>
+                            style={{ background: 'linear-gradient(135deg, #10B981, #059669)' }}>
                             {user?.name?.[0] || 'U'}
                         </div>
                         <div className="flex-1 min-w-0">

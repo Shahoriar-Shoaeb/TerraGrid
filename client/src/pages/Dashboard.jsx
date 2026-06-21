@@ -64,11 +64,11 @@ export default function Dashboard() {
                     </div>
                     <ResponsiveContainer width="100%" height={220}>
                         <BarChart data={data?.warehouseStockData || []} margin={{ left: -20 }}>
-                            <CartesianGrid strokeDasharray="3 3" stroke="#2A2D3E" />
+                            <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
                             <XAxis dataKey="name" tick={{ fill: '#64748B', fontSize: 12 }} />
                             <YAxis tick={{ fill: '#64748B', fontSize: 12 }} />
                             <Tooltip content={<CustomTooltip />} />
-                            <Bar dataKey="totalStock" name="Stock" fill="#6C63FF" radius={[4, 4, 0, 0]} />
+                            <Bar dataKey="totalStock" name="Stock" fill="#10B981" radius={[4, 4, 0, 0]} />
                         </BarChart>
                     </ResponsiveContainer>
                 </motion.div>
@@ -76,19 +76,19 @@ export default function Dashboard() {
                 {/* Daily movement line chart */}
                 <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="glass-card">
                     <div className="flex items-center gap-2 mb-4">
-                        <Activity size={18} className="text-accent" />
+                        <Activity size={18} className="text-emerald-500" />
                         <h3 className="font-bold text-text-primary">Stock Movement (Last 7 Days)</h3>
                     </div>
                     <ResponsiveContainer width="100%" height={220}>
                         <LineChart data={data?.dailyMovements || []} margin={{ left: -20 }}>
-                            <CartesianGrid strokeDasharray="3 3" stroke="#2A2D3E" />
+                            <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
                             <XAxis dataKey="date" tick={{ fill: '#64748B', fontSize: 11 }} />
                             <YAxis tick={{ fill: '#64748B', fontSize: 12 }} />
                             <Tooltip content={<CustomTooltip />} />
                             <Legend wrapperStyle={{ fontSize: '12px', color: '#64748B' }} />
-                            <Line type="monotone" dataKey="added" name="Added" stroke="#22C55E" strokeWidth={2} dot={{ r: 3 }} />
+                            <Line type="monotone" dataKey="added" name="Added" stroke="#10B981" strokeWidth={2} dot={{ r: 3 }} />
                             <Line type="monotone" dataKey="removed" name="Removed" stroke="#EF4444" strokeWidth={2} dot={{ r: 3 }} />
-                            <Line type="monotone" dataKey="transferred" name="Transferred" stroke="#00D9FF" strokeWidth={2} dot={{ r: 3 }} />
+                            <Line type="monotone" dataKey="transferred" name="Transferred" stroke="#059669" strokeWidth={2} dot={{ r: 3 }} />
                         </LineChart>
                     </ResponsiveContainer>
                 </motion.div>

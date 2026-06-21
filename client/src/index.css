@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -26,47 +26,57 @@
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     @apply bg-surface;
   }
+
   ::-webkit-scrollbar-thumb {
     @apply bg-border rounded-full;
   }
+
   ::-webkit-scrollbar-thumb:hover {
-    background: #6C63FF66;
+    background: #10B98166;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-surface border border-border rounded-card p-6 shadow-card transition-all duration-300;
+    @apply bg-white border border-border rounded-card p-6 shadow-card transition-all duration-500;
+    backdrop-filter: blur(8px);
   }
+
   .glass-card:hover {
-    @apply border-primary/40 shadow-glow;
-    transform: translateY(-2px);
+    @apply border-primary/20 shadow-glow;
+    transform: translateY(-4px);
   }
 
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2.5 rounded-btn transition-all duration-200 flex items-center gap-2;
+    @apply bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-btn transition-all duration-300 flex items-center gap-2 shadow-soft;
   }
+
   .btn-primary:hover {
-    @apply shadow-glow;
-    transform: translateY(-1px);
+    @apply shadow-glow scale-[1.02];
   }
+
   .btn-primary:active {
-    transform: translateY(0) scale(0.98);
+    @apply scale-[0.98];
   }
 
   .btn-secondary {
-    @apply bg-surface hover:bg-border text-text-primary font-semibold px-6 py-2.5 rounded-btn border border-border transition-all duration-200 flex items-center gap-2;
+    @apply bg-surface hover:bg-slate-100/50 text-text-primary font-bold px-6 py-3 rounded-btn border border-border transition-all duration-300 flex items-center gap-2;
+  }
+
+  .btn-secondary:hover {
+    @apply border-primary/30 scale-[1.02];
   }
 
   .btn-danger {
-    @apply bg-danger/10 hover:bg-danger/20 text-danger font-semibold px-6 py-2.5 rounded-btn border border-danger/30 transition-all duration-200 flex items-center gap-2;
+    @apply bg-danger/5 hover:bg-danger text-danger hover:text-white font-bold px-6 py-3 rounded-btn border border-danger/20 transition-all duration-300 flex items-center gap-2;
   }
 
   .input-field {
-    @apply bg-bg border border-border rounded-btn px-4 py-2.5 text-text-primary placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/30 transition-all duration-200 w-full;
+    @apply bg-surface/50 border border-border rounded-btn px-4 py-3 text-text-primary placeholder-text-muted focus:outline-none focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all duration-300 w-full shadow-sm;
   }
 
   .badge {
@@ -76,13 +86,14 @@
   .sidebar-item {
     @apply flex items-center gap-3 px-4 py-3 rounded-btn text-text-muted hover:text-text-primary transition-all duration-200 cursor-pointer;
   }
+
   .sidebar-item:hover {
-    @apply bg-surface;
+    @apply bg-slate-100;
   }
+
   .sidebar-item.active {
-    @apply text-white;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.25) 0%, rgba(0, 217, 255, 0.1) 100%);
-    border: 1px solid rgba(108, 99, 255, 0.3);
+    @apply text-primary bg-primary/10 border-primary/20;
+    border: 1px solid rgba(16, 185, 129, 0.2);
   }
 
   .page-header {
@@ -90,24 +101,24 @@
   }
 
   .table-row {
-    @apply border-b border-border hover:bg-surface/60 transition-colors duration-150;
+    @apply border-b border-border hover:bg-slate-50/80 transition-colors duration-150;
   }
 
   .skeleton {
-    @apply bg-border/50 rounded animate-pulse;
+    @apply bg-slate-200 rounded animate-pulse;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #6C63FF 0%, #00D9FF 100%);
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glow-border {
-    box-shadow: 0 0 0 1px rgba(108, 99, 255, 0.3), 0 0 20px rgba(108, 99, 255, 0.1);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 0 20px rgba(16, 185, 129, 0.05);
   }
 
   .no-scrollbar::-webkit-scrollbar {
