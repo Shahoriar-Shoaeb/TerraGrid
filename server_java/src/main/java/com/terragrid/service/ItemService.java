@@ -20,7 +20,10 @@ public class ItemService {
     private InventoryItemRepository itemRepository;
 
     public List<InventoryItem> getAllItems(String search, String category) {
-        return itemRepository.findAllFiltered(search, category);
+        String searchParam = (search == null || search.isBlank()) ? null : search;
+        String categoryParam = (category == null || category.isBlank()) ? null : category;
+        String searchPattern = (searchParam != null) ? "%" + searchParam.toLowerCase() + "%" : null;
+        return itemRepository.findAllFiltered(searchPattern, categoryParam);
     }
 
     public List<CategoryResponse> getCategories() {
