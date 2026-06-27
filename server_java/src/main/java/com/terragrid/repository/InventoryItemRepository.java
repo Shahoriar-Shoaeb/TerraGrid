@@ -20,6 +20,6 @@ public interface InventoryItemRepository extends JpaRepository<InventoryItem, In
 
     @Query("SELECT DISTINCT i FROM InventoryItem i LEFT JOIN FETCH i.stockLevels s LEFT JOIN FETCH s.warehouse w " +
            "WHERE (:category IS NULL OR i.category = :category) " +
-           "AND (:search IS NULL OR LOWER(i.name) LIKE LOWER(CONCAT('%', :search, '%')) OR LOWER(i.sku) LIKE LOWER(CONCAT('%', :search, '%')) OR LOWER(i.category) LIKE LOWER(CONCAT('%', :search, '%')))")
-    List<InventoryItem> findAllFiltered(@Param("search") String search, @Param("category") String category);
+           "AND (:searchPattern IS NULL OR LOWER(i.name) LIKE :searchPattern OR LOWER(i.sku) LIKE :searchPattern OR LOWER(i.category) LIKE :searchPattern)")
+    List<InventoryItem> findAllFiltered(@Param("searchPattern") String searchPattern, @Param("category") String category);
 }
